@@ -5,10 +5,16 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useEffect, useRef } from 'react';
 
+declare global {
+  interface Window {
+    google: any;
+  }
+}
+
 const Contact = () => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<google.maps.Map | null>(null);
-  const markerRef = useRef<google.maps.Marker | null>(null);
+  const mapInstanceRef = useRef<any>(null);
+  const markerRef = useRef<any>(null);
 
   useEffect(() => {
     // Load Google Maps script
@@ -26,32 +32,32 @@ const Contact = () => {
 
       const location = { lat: 17.752730769734622, lng: 83.2462172858072 };
 
-      const map = new google.maps.Map(mapRef.current, {
+      const map = new window.google.maps.Map(mapRef.current, {
         center: location,
         zoom: 16,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: window.google.maps.MapTypeId.ROADMAP,
         mapTypeControl: true,
         mapTypeControlOptions: {
-          position: google.maps.ControlPosition.TOP_RIGHT
+          position: window.google.maps.ControlPosition.TOP_RIGHT
         },
         zoomControl: true,
         zoomControlOptions: {
-          position: google.maps.ControlPosition.RIGHT_CENTER
+          position: window.google.maps.ControlPosition.RIGHT_CENTER
         },
         streetViewControl: true,
         fullscreenControl: true
       });
 
       // Add marker
-      const marker = new google.maps.Marker({
+      const marker = new window.google.maps.Marker({
         position: location,
         map: map,
         title: 'Spiritual Tablets Research Foundation',
-        animation: google.maps.Animation.DROP
+        animation: window.google.maps.Animation.DROP
       });
 
       // Add info window with the exact format from the image
-      const infoWindow = new google.maps.InfoWindow({
+      const infoWindow = new window.google.maps.InfoWindow({
         content: `
           <div style="padding: 8px; max-width: 300px; font-family: Roboto, Arial, sans-serif;">
             <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">SPIRITUAL TABLETS RESEARCH...</h3>
@@ -83,7 +89,7 @@ const Contact = () => {
     };
 
     // Check if Google Maps is already loaded
-    if (window.google && window.google.maps) {
+    if (typeof window !== 'undefined' && window.google && window.google.maps) {
       initializeMap();
     } else {
       loadGoogleMapsScript();

@@ -1,3 +1,6 @@
+import React from 'react';
+import Image from 'next/image';
+
 const VisionMission = () => {
   return (
     <section id="vision" className="py-16 bg-gray-50">
@@ -6,9 +9,11 @@ const VisionMission = () => {
           {/* Left Column - Chakra Image */}
           <div className="flex justify-center">
             <div className="relative max-w-md">
-              <img
+              <Image
                 src="https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads//Artboard-812.png"
-                alt="Spiritual chakra meditation illustration showing spiritual levels - Intellect, Wisdom, Wellness, Meditation"
+                alt="Spiritual chakra meditation illustration showing spiritual levels &#39;Intellect, Wisdom, Wellness, Meditation&#39;"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-full"
               />
             </div>
@@ -35,7 +40,7 @@ const VisionMission = () => {
               <p className="text-gray-600 leading-relaxed">
                 The spiritual tablet research foundation aims to educate, advocate, impart 
                 spiritual wisdom. Further, apply this spiritual wisdom based on spiritual tablets 
-                and thus eradicate the root cause of people's problems at all levels.
+                and thus eradicate the root cause of people`%apos;`s problems at all levels.
               </p>
               
               <div className="space-y-2">

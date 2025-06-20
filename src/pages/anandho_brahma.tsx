@@ -24,7 +24,7 @@ const Anandho_Brahma: React.FC = () => {
             Aanandho Brahma - Telugu
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            This event is organised every Saturday by <strong>'Aanandho Brahma'</strong> (Enjoyment Science Academy) 
+            This event is organised every Saturday by <strong>`&apos;`Aanandho Brahma`&apos;`</strong> (Enjoyment Science Academy) 
             in association with SuDarshini Academy of Music & Soul Science. Sessions are taken basing on the main theme 
             that music flows from within, beyond any barriers and through <em>sādhana</em> everyone can activate the 
             state of Soul level singing. This is a live event on Aanandho Brahma Telugu YouTube Channel. Anyone who are 
