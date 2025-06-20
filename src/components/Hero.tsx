@@ -1,4 +1,5 @@
-// Removed UI Button import; using native button for styling consistency
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const Hero = () => {
   const handleKnowMore = () => {
@@ -35,9 +36,11 @@ const Hero = () => {
           {/* Right Column - Meditation Image */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <img
+              <Image
                 src="https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads//Spiritual-Intellect-Is-the-Root-Logo.png"
                 alt="Spiritual meditation illustration with chakras and tree of life"
+                width={600}
+                height={400}
                 className="w-full max-w-lg h-auto rounded-lg "
               />
             </div>

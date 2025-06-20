@@ -1,3 +1,6 @@
+import React from 'react';
+import Image from 'next/image';
+import Link from "next/link";
 
 const DonateComp = () => {
   return (
@@ -12,12 +15,12 @@ const DonateComp = () => {
 	      	<span style={{ color: "#008000" }}>Your Greatness</span>
 	      </h2>
 	      <h2 className="text-3xl font-bold text-gray-500">is Not What you</h2>
-	      <h2 className="text-3xl font-bold text-gray-500">Have, It's What You <span style={{ color: "#008000" }}>Give.</span></h2>
+	      <h2 className="text-3xl font-bold text-gray-500">Have, It`&apos;`s What You <span style={{ color: "#008000" }}>Give.</span></h2>
               <p className="text-gray-600 leading-relaxed">
                 Spiritual Tablet Research Foundation is a non-profit organization formed with a view to provide spiritual solutions for physical and mental ailments.
               </p>
             </div>
-	  	<a
+	  	<Link
 		  key="Donate"
 		  href="/donate"
 		  className="bg-spiritual-green hover:bg-spiritual-green/90 text-white "
@@ -34,14 +37,16 @@ const DonateComp = () => {
           	  }}
 		>
 		  Donate Now
-		</a>
+		</Link>
 	  </div>
 	  {/* Left Column */}
           <div className="flex justify-center">
             <div className="relative max-w-md">
-              <img
+              <Image
                 src="https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads//Artboard-81Donate.png"
-                alt="Spiritual chakra meditation illustration showing spiritual levels - Intellect, Wisdom, Wellness, Meditation"
+                alt="Spiritual chakra meditation illustration showing spiritual levels &#39;Intellect, Wisdom, Wellness, Meditation&#39;"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-full"
               />
             </div>

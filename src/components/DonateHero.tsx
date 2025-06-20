@@ -1,3 +1,5 @@
+import React from 'react';
+import Image from 'next/image';
 
 const DonateHero = () => {
   return (
@@ -7,9 +9,11 @@ const DonateHero = () => {
           {/* Left Column */}
           <div className="flex justify-center">
             <div className="relative max-w-md">
-              <img
+              <Image
                 src="https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads//donate-hero.jpeg"
-                alt="Spiritual chakra meditation illustration showing spiritual levels - Intellect, Wisdom, Wellness, Meditation"
+                alt="Spiritual chakra meditation illustration showing spiritual levels &#39;Intellect, Wisdom, Wellness, Meditation&#39;"
+                width={600}
+                height={400}
                 className="w-full h-auto "
               />
             </div>

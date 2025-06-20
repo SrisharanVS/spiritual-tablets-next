@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Founder = () => {
   const sectionRef = useRef(null);
@@ -35,15 +36,17 @@ const Founder = () => {
 	      </p>
               <h2 className="text-3xl font-bold text-white">Founder</h2>
               <p className="text-gray-100 leading-relaxed">
-                "Dr. Gopala Krishna" is a medical doctor who started his journey of spiritual science in search of happiness and the truth, under the guidance of "Brahmarshi Patriji" and specially trained by grand master "Paul Vijay Kumar". In this journey he got enlightened and realized that "Spiritual intellect is the root – physical health is the fruit". He started sharing the same with his patients who approached him for medical treatment. As a part of this, he established spiritual health care centers and maintained them for ten years in different parts of India, also offered esteemed spiritual services as an ancillary to qualified treatment with the help of senior masters who are trained by him. Eventually, he strongly advocated the realisation of holistic health through meditation in addition to medication.
+                `&quot;`Dr. Gopala Krishna`&quot;` is a medical doctor who started his journey of spiritual science in search of happiness and the truth, under the guidance of `&quot;`Brahmarshi Patriji`&quot;` and specially trained by grand master `&quot;`Paul Vijay Kumar`&quot;`. In this journey he got enlightened and realized that `&quot;`Spiritual intellect is the root – physical health is the fruit`&quot;`. He started sharing the same with his patients who approached him for medical treatment. As a part of this, he established spiritual health care centers and maintained them for ten years in different parts of India, also offered esteemed spiritual services as an ancillary to qualified treatment with the help of senior masters who are trained by him. Eventually, he strongly advocated the realisation of holistic health through meditation in addition to medication.
               </p>
             </div>
           </div>
 	   <div className="flex justify-center">
             <div className="relative max-w-md">
-              <img
+              <Image
                 src="https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads//PHOTO-2019-01-26-14-58-24.jpeg"
-                alt="Spiritual chakra meditation illustration showing spiritual levels - Intellect, Wisdom, Wellness, Meditation"
+                alt="Spiritual chakra meditation illustration showing spiritual levels &#39;Intellect, Wisdom, Wellness, Meditation&#39;"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -58,9 +61,11 @@ export default Founder;
 
 export const FounderImageSection = () => (
   <div className="w-full mt-12">
-    <img
+    <Image
       src="https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads//Artboard-515.png"
-      alt=""
+      alt="Founder section image"
+      width={1200}
+      height={400}
       className="w-full object-contain"
       style={{ display: 'block' }}
     />
@@ -72,7 +77,7 @@ export const GenesisSection = ({ onKnowMore }: { onKnowMore: () => void }) => (
     <div className="max-w-5xl mx-auto px-4">
       <h2 className="text-4xl font-bold text-gray-800 mb-6">Genesis</h2>
       <p className="text-lg text-gray-600 mb-8">
-        The association with Brahmashri Partriji, the 18 principles of pyramid Spiritual society moment and the experiences of mediation, particularly the "observation of our breath", led to the formation of 12 spiritual tablets.
+        The association with Brahmashri Partriji, the 18 principles of pyramid Spiritual society moment and the experiences of mediation, particularly the `&quot;`observation of our breath`&quot;`, led to the formation of 12 spiritual tablets.
       </p>
       <p className="text-lg text-gray-600 mb-8">
         Continuation of Dr Gk's spiritual evolution led to numerous visions, premonitions and divine guidance based on which he conducted workshops. Many participants in these workshops and mediations noticed gradual improvements in their overall health. So diversified were the experiences that, when encapsulated into individual concepts, led to the formation of numerous spiritual health capsules.
@@ -93,11 +98,11 @@ export const OverviewGenesisSection = () => (
     <div className="max-w-5xl mx-auto px-4">
       <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">Overview & Genesis</h2>
       <p className="text-xl text-gray-600 mb-10 text-center">
-        The Pyramid Spiritual Societies Movement (PSSM) is non-religious, non-cult, non-profit voluntary organization with the mission to spread "Anapanasati Meditation, Vegetarianism and Pyramid Power" to everyone. Spiritual Tablets is the self-empowered Individual Health Care Initiative as an extension of the PSSM.
+        The Pyramid Spiritual Societies Movement (PSSM) is non-religious, non-cult, non-profit voluntary organization with the mission to spread `&quot;`Anapanasati Meditation, Vegetarianism and Pyramid Power`&quot;` to everyone. Spiritual Tablets is the self-empowered Individual Health Care Initiative as an extension of the PSSM.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="text-gray-600 text-lg leading-relaxed">
-          "Dr. Gopala Krishna" is a medical doctor who started his journey of spiritual science in search of happiness and the truth, under the guidance of "Brahmarshi Patriji" and specially trained by grand master "Paul Vijay Kumar". In this journey he got enlightened and realized that "Spiritual intellect is the root - physical health is the fruit". He started sharing the same with his patients who approached him for medical treatment. As a part of this, he established spiritual health care centers and maintained them for ten years in different parts of India, also offered esteemed spiritual services as an ancillary to qualified treatment with the help of senior masters who are trained by him.
+        `&quot;`Dr. Gopala Krishna`&quot;` is a medical doctor who started his journey of spiritual science in search of happiness and the truth, under the guidance of `&quot;`Brahmarshi Patriji`&quot;` and specially trained by grand master `&quot;`Paul Vijay Kumar`&quot;`. In this journey he got enlightened and realized that `&quot;`Spiritual intellect is the root - physical health is the fruit`&quot;`. He started sharing the same with his patients who approached him for medical treatment. As a part of this, he established spiritual health care centers and maintained them for ten years in different parts of India, also offered esteemed spiritual services as an ancillary to qualified treatment with the help of senior masters who are trained by him.
         </div>
         <div className="text-gray-600 text-lg leading-relaxed">
           This Spiritual Health Science Journey started in the Year 1998. The first Organization registered was under the Name DHYANAROGYA SEVA SANGAM: REGD NO: 514/2008, after 10 years of Teaching & Spreading awareness. Later it was dissolved to lay path for Spiritual Tablets Research Foundation to meet all Global requirements. Subsequently, following Trusts have been established to support Residential Pyramid Training Centers through Spiritual Tablets.

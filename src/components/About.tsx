@@ -92,9 +92,9 @@ const About = () => {
 
             <div className="bg-card-gradient p-6 rounded-lg border border-cosmic-gold/30">
               <blockquote className="text-white/90 italic text-lg mb-4">
-                "Spiritual Tablets changed my life. The reading I received gave me the clarity I needed 
+                Spiritual Tablets changed my life. The reading I received gave me the clarity I needed 
                 to make important decisions, and the crystal healing session helped me find inner peace 
-                I hadn't felt in years."
+                I hadn`&apos;`t felt in years.
               </blockquote>
               <div className="flex items-center gap-2">
                 <div className="flex">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// import Image from 'next/image';
 
 const dummyLogo = "https://swopgpgsdcqwvvnpeqvd.supabase.co/storage/v1/object/public/public-uploads/spiritual-tablets-web-logo-1030x292.png";
 const channels = [
