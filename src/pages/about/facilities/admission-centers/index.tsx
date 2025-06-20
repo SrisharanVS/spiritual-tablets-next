@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { createClient } from '@supabase/supabase-js';
 import { motion, useAnimation } from 'framer-motion';
@@ -61,7 +59,6 @@ const AdmissionCenters: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Header />
       <motion.main
         ref={ref}
         initial="hidden"
@@ -102,7 +99,6 @@ const AdmissionCenters: React.FC = () => {
           </Table>
         )}
       </motion.main>
-      <Footer />
     </div>
   );
 };

@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 const WellnessServiceDetails = () => (
   <div className="min-h-screen bg-white flex flex-col">
-    <Header />
     <main className="flex-1 flex flex-col items-center justify-center py-16 px-4 bg-white">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
@@ -24,7 +21,6 @@ const WellnessServiceDetails = () => (
         </div>
       </div>
     </main>
-    <Footer />
   </div>
 );
 

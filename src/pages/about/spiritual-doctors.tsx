@@ -1,7 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const doctors = [
@@ -47,7 +45,6 @@ const SpiritualDoctors: React.FC = () => {
   const router = useRouter();
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
       <motion.main
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -158,7 +155,6 @@ const SpiritualDoctors: React.FC = () => {
           </div>
         </div>
       </motion.main>
-      <Footer />
     </div>
   );
 };

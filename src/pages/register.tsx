@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 const regions = [
   { key: 'usa', label: 'USA' },
@@ -54,7 +52,7 @@ const IndiaContent = () => (
     <div className="space-y-4">
       <h2 className="text-3xl font-bold text-gray-800">ధ్యానం + జ్ఞానం +ఆచరణతో = సంపూర్ణ ఆరోగ్యం</h2>
       <p className="text-gray-600 leading-relaxed">
-        స్పిరిచ్యువల్ టాబ్లెట్స్ రీసెర్చ్ ఫౌండేషన్ ద్వారా అద్భుతమైన అవకాశం! “స్పిరిచ్యువల్ కౌన్సిలింగ్” Dr.G.K Sir యొక్క గైడెన్స్ తో మరియు సీనియర్ స్పిరిచ్యువల్ కౌన్సిలర్స్ ద్వారా…
+        స్పిరిచ్యువల్ టాబ్లెట్స్ రీసెర్చ్ ఫౌండేషన్ ద్వారా అద్భుతమైన అవకాశం! "స్పిరిచ్యువల్ కౌన్సిలింగ్" Dr.G.K Sir యొక్క గైడెన్స్ తో మరియు సీనియర్ స్పిరిచ్యువల్ కౌన్సిలర్స్ ద్వారా…
       </p>
       <p className="text-gray-600 leading-relaxed">
       ఆధ్యాత్మిక జీవన విధానం మరియు ఆరోగ్య సలహాలు
@@ -211,7 +209,6 @@ const Register: React.FC = () => {
 
   return (
     <>
-      <Header />
       <div className="container mx-auto px-4 py-10 flex flex-col md:flex-row gap-8 min-h-[70vh]">
         {/* Sidebar */}
         <div className="w-full md:w-1/4 flex flex-col gap-4 mb-6 md:mb-0">
@@ -230,7 +227,6 @@ const Register: React.FC = () => {
           <ContentComponent />
         </div>
       </div>
-      <Footer />
     </>
   );
 };

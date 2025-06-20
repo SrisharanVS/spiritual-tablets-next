@@ -1,6 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-
 const Associations = () => {
   const associations = [
     {
@@ -37,51 +34,24 @@ const Associations = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#142c2b] text-white">
-      <Header />
-      <main className="max-w-6xl mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row gap-8 items-start">
-          {/* Left side - Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src="/lovable-uploads/partnership-agreement-deal-concept_3446-601.jpeg"
-              alt="Partnership Agreement"
-              className="w-full max-w-md h-auto rounded-lg shadow-lg"
-            />
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center py-12 px-4">
+      <h1 className="text-3xl font-bold mb-8 text-gray-800">Associations</h1>
+      <div className="max-w-2xl w-full space-y-8">
+        {associations.map((assoc, idx) => (
+          <div key={idx} className="bg-gray-100 rounded-lg p-6 shadow-md">
+            <h2 className="text-xl font-semibold mb-4 text-gray-700">{assoc.name}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {assoc.links.map((link, lidx) => (
+                <li key={lidx}>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          {/* Right side - Content */}
-          <div className="w-full md:w-1/2 space-y-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-white leading-snug">
-              In Delivering our Services,<br />
-              we collaborate with the below Organizations.
-            </h1>
-
-            <ul className="pl-5 space-y-6">
-  {associations.map((association, index) => (
-    <li key={index} className="list-disc marker:text-white text-base text-white">
-      <span className="font-semibold">{association.name}</span>:{' '}
-      {association.links.map((link, linkIndex) => (
-        <div key={linkIndex}>
-         <a
-  href={link.url}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ color: '#01853a' }}
-  className="hover:underline break-words"
->
-  {link.label}
-</a>
-
-        </div>
-      ))}
-    </li>
-  ))}
-</ul>
-          </div>
-        </div>
-      </main>
-      <Footer />
+        ))}
+      </div>
     </div>
   );
 };

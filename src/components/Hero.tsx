@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+// Removed UI Button import; using native button for styling consistency
 
 const Hero = () => {
   const handleKnowMore = () => {
@@ -21,14 +21,15 @@ const Hero = () => {
                 Physical health is the fruit
               </h2>
             </div>
-            
-            <Button 
-              size="lg" 
-              className="bg-spiritual-green hover:bg-spiritual-green/90 text-white px-8 py-3 text-lg font-medium cursor-pointer"
-              onClick={handleKnowMore}
-            >
-              ── Know More
-            </Button>
+            {/* Know More button only, no line */}
+            <div className="mt-4">
+              <button
+                onClick={handleKnowMore}
+                className="bg-green-700 hover:bg-green-800 text-white px-10 py-3 text-xl font-bold rounded-md shadow-lg transition-colors border-2 border-green-700"
+              >
+                Know More
+              </button>
+            </div>
           </div>
 
           {/* Right Column - Meditation Image */}

@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -98,8 +96,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f3eded]">
-      <Header />
+    <div className="min-h-screen bg-white flex flex-col">
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
         {/* Left: Address and Map */}
         <div className="md:w-1/2 space-y-6">
@@ -153,7 +150,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

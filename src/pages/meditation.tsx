@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '@/components/Footer';
 
 const Meditation = () => {
   useEffect(() => {
@@ -17,8 +15,6 @@ const Meditation = () => {
   
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
@@ -112,14 +108,6 @@ const Meditation = () => {
           </div>
         </div>
       </main>
-
-    
-
- <Footer />
-
-
-        
-      
     </div>
   );
 };

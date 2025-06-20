@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { createClient } from '@supabase/supabase-js';
 import { motion, useAnimation } from 'framer-motion';
@@ -62,7 +60,6 @@ const VirtualWellnessCentres: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Header />
       <motion.main
         ref={ref}
         initial="hidden"
@@ -79,35 +76,26 @@ const VirtualWellnessCentres: React.FC = () => {
         ) : centers.length === 0 ? (
           <div className="text-center py-8 text-gray-400">No virtual wellness centres found.</div>
         ) : (
-          <Table className="w-full border border-gray-200 rounded-lg overflow-hidden">
-            <TableHeader className="bg-gray-100">
+          <Table className="w-full mt-8">
+            <TableHeader>
               <TableRow>
-                <TableHead className="text-gray-700">Name</TableHead>
-                <TableHead className="text-gray-700">Phone Number</TableHead>
-                <TableHead className="text-gray-700">Languages Known</TableHead>
-                <TableHead className="text-gray-700">Village/Town/City</TableHead>
-                <TableHead className="text-gray-700">District</TableHead>
-                <TableHead className="text-gray-700">State</TableHead>
-                <TableHead className="text-gray-700">Country</TableHead>
+                <TableHead>Centre Name</TableHead>
+                <TableHead>Mentor</TableHead>
+                <TableHead>Contact</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {centers.map((center, idx) => (
-                <TableRow key={idx} className="hover:bg-gray-50">
+                <TableRow key={idx}>
                   <TableCell>{center.Name}</TableCell>
-                  <TableCell>{center['Phone Number']}</TableCell>
                   <TableCell>{center['Languages Known']}</TableCell>
-                  <TableCell>{center['Village/Town/City']}</TableCell>
-                  <TableCell>{center.District}</TableCell>
-                  <TableCell>{center.State}</TableCell>
-                  <TableCell>{center.Country}</TableCell>
+                  <TableCell>{center['Phone Number']}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         )}
       </motion.main>
-      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Menu, X, Search, Facebook, Twitter, Instagram, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 type NavItem = {
   name: string;
@@ -168,11 +169,12 @@ const Header = () => {
       return (
         <div 
           key={item.name} 
-          className="relative"
+          className="relative overflow-visible"
           onMouseEnter={() => handleDropdownEnter(item.name)}
           onMouseLeave={handleDropdownLeave}
         >
           <button
+            onClick={() => setOpenDropdown(isOpen ? null : item.name)}
             className="flex items-center space-x-1 text-gray-700 hover:text-spiritual-green transition-colors font-medium"
           >
             <span>{item.name}</span>
@@ -195,6 +197,7 @@ const Header = () => {
                       onMouseLeave={handleSubDropdownLeave}
                     >
                       <button
+                        onClick={() => setOpenSubDropdown(openSubDropdown === child.name ? null : child.name)}
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-spiritual-green/10 hover:text-spiritual-green transition-colors flex items-center justify-between"
                       >
                         <span>{child.name}</span>
@@ -247,7 +250,7 @@ const Header = () => {
         <Link
           key={item.name}
           href={item.href}
-          className="text-gray-700 hover:text-spiritual-green transition-colors duration-300 font-medium"
+          className="text-gray-700 hover:text-spiritual-green transition-colors duration-300 font-medium px-4 py-2"
           onClick={isMobile ? () => setIsMenuOpen(false) : undefined}
         >
           {item.name}
@@ -259,7 +262,7 @@ const Header = () => {
       <a
         key={item.name}
         href={item.href}
-        className="text-gray-700 hover:text-spiritual-green transition-colors duration-300 font-medium"
+        className="text-gray-700 hover:text-spiritual-green transition-colors duration-300 font-medium px-4 py-2"
         onClick={isMobile ? () => setIsMenuOpen(false) : undefined}
       >
         {item.name}
@@ -268,9 +271,9 @@ const Header = () => {
   };
 
   return (
-    <>
+    <motion.div className="overflow-visible" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       {/* Top announcement bar */}
-      <div className="bg-spiritual-green text-white text-sm py-2">
+      <div className="bg-green-700 text-white text-sm py-2">
         <div className="w-full px-2 flex items-center justify-center gap-4 text-center lg:container lg:mx-auto lg:px-4">
           <span>✨ Latest Workshops</span>
           <span>🌟 Global Annual Programs</span>
@@ -278,7 +281,7 @@ const Header = () => {
         </div>
       </div>
 
-      <header className="bg-white shadow-sm border-b">
+      <header className="relative z-50 bg-white shadow-sm border-b overflow-visible">
         <div className="w-full px-2 py-2 lg:container lg:mx-auto">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -291,7 +294,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6 relative overflow-visible">
+            <nav className="hidden lg:flex items-center space-x-8 relative overflow-visible">
               {navItems.map((item) => renderNavItem(item))}
             </nav>
 
@@ -325,6 +328,7 @@ const Header = () => {
                 <a href="https://www.instagram.com/spiritualtabletsgk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-500 hover:text-pink-500 transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
+                <Search className="w-6 h-6 text-gray-500 hover:text-black transition-colors cursor-pointer" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -346,7 +350,7 @@ const Header = () => {
           )}
         </div>
       </header>
-    </>
+    </motion.div>
   );
 };
 

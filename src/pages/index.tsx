@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VisionMission from '@/components/VisionMission';
 import SpiritualTabletsFramework from '@/components/SpiritualTabletsFramework';
 import Founder, { FounderImageSection, GenesisSection, OverviewGenesisSection, HealthcareMeditationServicesSection, StatsSection, TestimonialCarousel } from '@/components/Founder';
-import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const Index = () => {
@@ -13,7 +11,6 @@ const Index = () => {
   const router = useRouter();
   return (
     <div className="min-h-screen">
-      <Header />
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
         <Hero />
       </motion.div>
@@ -47,7 +44,6 @@ const Index = () => {
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.8 }}>
         <TestimonialCarousel />
       </motion.div>
-      <Footer />
     </div>
   );
 };

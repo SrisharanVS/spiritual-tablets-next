@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#333] flex flex-col">
-      <Header />
       <motion.main
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,7 +39,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </motion.main>
-      <Footer />
     </div>
   );
 };

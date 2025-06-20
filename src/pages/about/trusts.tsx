@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { createClient } from '@supabase/supabase-js';
 import { motion, useAnimation } from 'framer-motion';
@@ -140,14 +138,12 @@ const TrustSection: React.FC<{
 const Trusts: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#142c2b] text-white flex flex-col">
-      <Header />
       <main className="flex-1 max-w-6xl mx-auto px-4 py-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">Our Trusts</h1>
         {TABLES.map(({ table, heading, key }) => (
           <TrustSection key={key} table={table} heading={heading} />
         ))}
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 const Anandho_Brahma: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
         {/* Video section */}
         <div className="w-full lg:w-1/2 aspect-video relative">
@@ -36,22 +33,14 @@ const Anandho_Brahma: React.FC = () => {
         </div>
       </div>
       {/* Google Calendar Embed */}
-      <div className="max-w-6xl mx-auto mt-12 mb-12">
-
-  
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=naveenkrishnasadanala%40gmail.com&ctz=Asia%2FKolkata"
-      style={{ border: 0 }}
-      width="800"
-      height="600"
-      frameBorder="0"
-      scrolling="no"
-      
-    ></iframe>
-  
-</div>
-
-      <Footer />
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=naveenkrishnasadanala%40gmail.com&ctz=Asia%2FKolkata"
+        style={{ border: 0 }}
+        width="800"
+        height="600"
+        frameBorder="0"
+        scrolling="no"
+      ></iframe>
     </div>
   );
 };

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 const Global_Annual_Programs: React.FC = () => {
   const [selectedCountry, setSelectedCountry] = useState('ALL');
@@ -64,8 +62,6 @@ const Global_Annual_Programs: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       <div className="max-w-6xl mx-auto mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-left">
           Program Schedule – Annual Plan Across Globe
@@ -163,8 +159,6 @@ const Global_Annual_Programs: React.FC = () => {
 
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

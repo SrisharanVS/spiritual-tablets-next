@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import ResourceCard from '@/components/ResourceCard';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { getResources, ResourceItem } from '@/lib/resourceData';
 
 const ResourceGridPage = () => {
@@ -24,7 +22,6 @@ const ResourceGridPage = () => {
 
   return (
     <>
-      <Header />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8 capitalize">{language}</h1>
         {loading ? (
@@ -44,7 +41,6 @@ const ResourceGridPage = () => {
           </div>
         )}
       </div>
-      <Footer />
     </>
   );
 };
